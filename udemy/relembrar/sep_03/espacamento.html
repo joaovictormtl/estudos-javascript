@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica dos Espaçamentos em Design Web</title>
+    <link href="espacamento.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <h1>Lógica dos Espaçamentos em Design Web</h1>
+        <p>Entenda quando e como usar cada tipo de espaçamento em seus projetos</p>
+    </header>
+    
+    <div class="container">
+        <div class="card">
+            <h2>Sistema de Espaçamentos</h2>
+            <p>Um bom sistema de espaçamentos é baseado em uma unidade modular (geralmente 4px, 8px ou 12px) da qual todos os outros espaçamentos derivam.</p>
+            
+            <div class="spacing-system">
+                <h3>Escala de Espaçamentos (base: 8px)</h3>
+                
+                <div class="spacing-example">
+                    <span class="label">xxs</span>
+                    <span class="visual" style="width: var(--space-xxs);"></span>
+                    <span class="size">4px</span>
+                </div>
+                
+                <div class="spacing-example">
+                    <span class="label">xs</span>
+                    <span class="visual" style="width: var(--space-xs);"></span>
+                    <span class="size">8px</span>
+                </div>
+                
+                <div class="spacing-example">
+                    <span class="label">sm</span>
+                    <span class="visual" style="width: var(--space-sm);"></span>
+                    <span class="size">16px</span>
+                </div>
+                
+                <div class="spacing-example">
+                    <span class="label">md</span>
+                    <span class="visual" style="width: var(--space-md);"></span>
+                    <span class="size">24px</span>
+                </div>
+                
+                <div class="spacing-example">
+                    <span class="label">lg</span>
+                    <span class="visual" style="width: var(--space-lg);"></span>
+                    <span class="size">32px</span>
+                </div>
+                
+                <div class="spacing-example">
+                    <span class="label">xl</span>
+                    <span class="visual" style="width: var(--space-xl);"></span>
+                    <span class="size">40px</span>
+                </div>
+                
+                <div class="spacing-example">
+                    <span class="label">xxl</span>
+                    <span class="visual" style="width: var(--space-xxl);"></span>
+                    <span class="size">48px</span>
+                </div>
+                
+                <div class="spacing-example">
+                    <span class="label">xxxl</span>
+                    <span class="visual" style="width: var(--space-xxxl);"></span>
+                    <span class="size">64px</span>
+                </div>
+            </div>
+            
+            <div class="tip">
+                <strong>Dica:</strong> Usar uma escala baseada em múltiplos de 4px ou 8px ajuda a criar consistência visual e alinhamento preciso em todos os elementos da interface.
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Quando Usar Cada Espaçamento</h2>
+            
+            <div class="usage-examples">
+                <div class="usage-item">
+                    <h4>4px (xxs)</h4>
+                    <p>Espaçamentos mínimos entre elementos muito próximos, ajustes finos de alinhamento.</p>
+                </div>
+                
+                <div class="usage-item">
+                    <h4>8px (xs)</h4>
+                    <p>Espaçamento interno de componentes pequenos, margens entre elementos relacionados.</p>
+                </div>
+                
+                <div class="usage-item">
+                    <h4>16px (sm)</h4>
+                    <p>Espaçamento padrão entre elementos, padding interno de componentes, margens entre seções relacionadas.</p>
+                </div>
+                
+                <div class="usage-item">
+                    <h4>24px (md)</h4>
+                    <p>Espaçamento entre grupos de elementos, margens médias, padding de cartões.</p>
+                </div>
+                
+                <div class="usage-item">
+                    <h4>32px (lg)</h4>
+                    <p>Espaçamento entre seções distintas, margens maiores, padding de containers.</p>
+                </div>
+                
+                <div class="usage-item">
+                    <h4>40px (xl)</h4>
+                    <p>Espaçamento entre componentes maiores, seções de página, margens laterais de layout.</p>
+                </div>
+                
+                <div class="usage-item">
+                    <h4>48px (xxl)</h4>
+                    <p>Espaçamento entre elementos grandes, seções principais de página.</p>
+                </div>
+                
+                <div class="usage-item">
+                    <h4>64px (xxxl)</h4>
+                    <p>Espaçamentos grandes entre seções principais, margens superiores/inferiores de páginas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Exemplos Práticos de Aplicação</h2>
+        
+        <h3>Botões e Elementos Interativos</h3>
+        <div class="demo-box">
+            <button class="button" style="padding: var(--space-xs) var(--space-sm);">Pequeno</button>
+            <button class="button" style="padding: var(--space-sm) var(--space-md);">Médio</button>
+            <button class="button" style="padding: var(--space-md) var(--space-lg);">Grande</button>
+        </div>
+        
+        <div class="code-example">
+            /* Botões com diferentes espaçamentos */<br>
+            .btn-small {<br>
+            &nbsp;&nbsp;padding: var(--space-xs) var(--space-sm);<br>
+            }<br><br>
+            
+            .btn-medium {<br>
+            &nbsp;&nbsp;padding: var(--space-sm) var(--space-md);<br>
+            }<br><br>
+            
+            .btn-large {<br>
+            &nbsp;&nbsp;padding: var(--space-md) var(--space-lg);<br>
+            }
+        </div>
+        
+        <h3>Cartões e Containers</h3>
+        <div class="demo-box">
+            <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
+                <div style="padding: var(--space-md); background: var(--light); border-radius: var(--border-radius);">
+                    <h4 style="margin-bottom: var(--space-sm);">Cartão Pequeno</h4>
+                    <p style="margin-bottom: var(--space-sm);">Conteúdo do cartão</p>
+                    <button class="button">Ação</button>
+                </div>
+                
+                <div style="padding: var(--space-lg); background: var(--light); border-radius: var(--border-radius);">
+                    <h4 style="margin-bottom: var(--space-md);">Cartão Grande</h4>
+                    <p style="margin-bottom: var(--space-md);">Conteúdo do cartão com mais informações</p>
+                    <button class="button">Ação</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Demonstração Interativa</h2>
+        <p>Use os controles abaixo para ajustar os espaçamentos do elemento visual e veja o efeito:</p>
+        
+        <div class="interactive-demo">
+            <div class="controls">
+                <div class="control-group">
+                    <label for="padding">Padding:</label>
+                    <select id="padding">
+                        <option value="var(--space-xs)">8px (xs)</option>
+                        <option value="var(--space-sm)" selected>16px (sm)</option>
+                        <option value="var(--space-md)">24px (md)</option>
+                        <option value="var(--space-lg)">32px (lg)</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label for="margin">Margin:</label>
+                    <select id="margin">
+                        <option value="var(--space-xs)">8px (xs)</option>
+                        <option value="var(--space-sm)" selected>16px (sm)</option>
+                        <option value="var(--space-md)">24px (md)</option>
+                        <option value="var(--space-lg)">32px (lg)</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label for="gap">Gap (espaço entre elementos):</label>
+                    <select id="gap">
+                        <option value="var(--space-xxs)">4px (xxs)</option>
+                        <option value="var(--space-xs)">8px (xs)</option>
+                        <option value="var(--space-sm)" selected>16px (sm)</option>
+                        <option value="var(--space-md)">24px (md)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="visual-element" id="demo-element">
+                Elemento de Demonstração
+            </div>
+            
+            <div style="display: flex; gap: 16px;" id="demo-container">
+                <div style="padding: var(--space-sm); background: var(--success); border-radius: 4px;">Item 1</div>
+                <div style="padding: var(--space-sm); background: var(--success); border-radius: 4px;">Item 2</div>
+                <div style="padding: var(--space-sm); background: var(--success); border-radius: 4px;">Item 3</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Boas Práticas de Espaçamento</h2>
+        
+        <div class="tip">
+            <strong>Consistência é fundamental:</strong> Use o mesmo sistema de espaçamento em todo o projeto.
+        </div>
+        
+        <div class="tip">
+            <strong>Hierarquia visual:</strong> Use espaçamentos maiores para separar grupos de conteúdo diferentes e menores para elementos relacionados.
+        </div>
+        
+        <div class="tip">
+            <strong>Responsividade:</strong> Ajuste os espaçamentos para diferentes tamanhos de tela. Em dispositivos móveis, espaçamentos muito grandes podem desperdiçar espaço valioso.
+        </div>
+        
+        <div class="tip">
+            <strong>Use variáveis CSS:</strong> Defina seus espaçamentos como variáveis CSS para facilitar a manutenção e consistência.
+        </div>
+        
+        <div class="code-example">
+            /* Defina suas variáveis de espaçamento */<br>
+            :root {<br>
+            &nbsp;&nbsp;--space-unit: 8px;<br>
+            &nbsp;&nbsp;--space-xs: var(--space-unit);<br>
+            &nbsp;&nbsp;--space-sm: calc(var(--space-unit) * 2);<br>
+            &nbsp;&nbsp;--space-md: calc(var(--space-unit) * 3);<br>
+            &nbsp;&nbsp;--space-lg: calc(var(--space-unit) * 4);<br>
+            &nbsp;&nbsp;--space-xl: calc(var(--space-unit) * 5);<br>
+            }<br><br>
+            
+            /* Use as variáveis em seu CSS */<br>
+            .card {<br>
+            &nbsp;&nbsp;padding: var(--space-md);<br>
+            &nbsp;&nbsp;margin-bottom: var(--space-lg);<br>
+            }
+        </div>
+    </div>
+    
+    <footer>
+        <p>Guia de Espaçamentos em Design Web - Criado para ajudar designers e desenvolvedores</p>
+    </footer>
+
+    <script>
+        // Interatividade para a demonstração
+        document.getElementById('padding').addEventListener('change', function() {
+            document.getElementById('demo-element').style.padding = this.value;
+        });
+        
+        document.getElementById('margin').addEventListener('change', function() {
+            document.getElementById('demo-element').style.margin = this.value + ' 0';
+        });
+        
+        document.getElementById('gap').addEventListener('change', function() {
+            document.getElementById('demo-container').style.gap = this.value;
+        });
+    </script>
+</body>
+</html>

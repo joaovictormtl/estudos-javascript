@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padronização de Títulos e Parágrafos</title>
+    <link href="titulos_para.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <h1>Padronização de Títulos e Parágrafos</h1>
+        <p class="lead">Um sistema tipográfico escalável com proporções harmoniosas</p>
+    </header>
+    
+    <div class="container">
+        <div class="example-panel">
+            <h2>Exemplo de Uso</h2>
+            
+            <h1>Título Principal (h1)</h1>
+            <p class="lead">Este é um parágrafo de destaque (lead) que introduz o conteúdo abaixo.</p>
+            <p>Este é um parágrafo comum. Ele contém texto de exemplo para demonstrar o tamanho, altura de linha e espaçamento padrão para conteúdo corporal.</p>
+            
+            <h2>Subtítulo (h2)</h2>
+            <p>Outro parágrafo comum que segue um subtítulo. Observe o espaçamento consistente entre os elementos.</p>
+            
+            <h3>Título de Seção (h3)</h3>
+            <p>Texto de parágrafo normal abaixo de um título de seção. A hierarquia visual é mantida através do tamanho e peso da fonte.</p>
+            
+            <h4>Título de Subseção (h4)</h4>
+            <p>Parágrafo seguindo um título de subseção. Mesmo com múltiplos níveis, a consistência é mantida.</p>
+            
+            <h5>Título menor (h5)</h5>
+            <p>Este parágrafo demonstra o texto abaixo de um título de quinto nível, que é frequentemente usado para agrupamentos menores.</p>
+            
+            <h6>Título mínimo (h6)</h6>
+            <p>O nível mais baixo de título, geralmente usado para elementos muito específicos ou notas.</p>
+            <p class="small">Este é um texto pequeno, ideal para notas de rodapé, legendas ou informações secundárias.</p>
+        </div><!--example-panel-->
+        
+        <div class="example-panel">
+            <h2>Escala Tipográfica</h2>
+            <p>Nossa escala usa uma proporção de 1.250 (Major Third) para criar harmonia visual entre os tamanhos:</p>
+            
+            <div class="visual-scale">
+                <div class="scale-item">
+                    <span class="label">h1</span>
+                    <span class="text" style="font-size: var(--text-xxxl); font-weight: 800;">Título Principal</span>
+                    <span class="size">var(--text-xxxl)</span>
+                </div>
+                <div class="scale-item">
+                    <span class="label">h2</span>
+                    <span class="text" style="font-size: var(--text-xxl); font-weight: 700;">Subtítulo</span>
+                    <span class="size">var(--text-xxl)</span>
+                </div>
+                <div class="scale-item">
+                    <span class="label">h3</span>
+                    <span class="text" style="font-size: var(--text-xl); font-weight: 600;">Título de Seção</span>
+                    <span class="size">var(--text-xl)</span>
+                </div>
+                <div class="scale-item">
+                    <span class="label">h4</span>
+                    <span class="text" style="font-size: var(--text-lg); font-weight: 600;">Título de Subseção</span>
+                    <span class="size">var(--text-lg)</span>
+                </div>
+                <div class="scale-item">
+                    <span class="label">h5</span>
+                    <span class="text" style="font-size: var(--text-md); font-weight: 600;">Título Menor</span>
+                    <span class="size">var(--text-md)</span>
+                </div>
+                <div class="scale-item">
+                    <span class="label">h6</span>
+                    <span class="text" style="font-size: var(--text-sm); font-weight: 600; color: var(--accent-color);">Título Mínimo</span>
+                    <span class="size">var(--text-sm)</span>
+                </div>
+                <div class="scale-item">
+                    <span class="label">Parágrafo</span>
+                    <span class="text" style="font-size: var(--text-sm);">Texto corporal padrão</span>
+                    <span class="size">var(--text-sm)</span>
+                </div>
+                <div class="scale-item">
+                    <span class="label">Lead</span>
+                    <span class="text" style="font-size: var(--text-md);">Parágrafo de destaque</span>
+                    <span class="size">var(--text-md)</span>
+                </div>
+                <div class="scale-item">
+                    <span class="label">Pequeno</span>
+                    <span class="text" style="font-size: var(--text-xs); color: #777;">Texto secundário pequeno</span>
+                    <span class="size">var(--text-xs)</span>
+                </div>
+            </div>
+            
+            <h3>Código CSS</h3>
+            <div class="code-panel">
+                <pre>:root {
+  --text-base-size: 1rem;
+  --text-scale-ratio: 1.250;
+  
+  --text-xs: calc(var(--text-base-size) / var(--text-scale-ratio));
+  --text-sm: calc(var(--text-base-size));
+  --text-md: calc(var(--text-sm) * var(--text-scale-ratio));
+  --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+  --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+  --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+  --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+}
+
+h1 { font-size: var(--text-xxxl); font-weight: 800; }
+h2 { font-size: var(--text-xxl); font-weight: 700; }
+h3 { font-size: var(--text-xl); font-weight: 600; }
+h4 { font-size: var(--text-lg); font-weight: 600; }
+h5 { font-size: var(--text-md); font-weight: 600; }
+h6 { font-size: var(--text-sm); font-weight: 600; }
+
+p { font-size: var(--text-sm); }
+.lead { font-size: var(--text-md); }
+.small { font-size: var(--text-xs); }</pre>
+            </div>
+        </div><!--example-panel-->
+    </div><!--container-->
+    
+    <footer>
+        <p>Sistema de Design Tipográfico - Criado com escalas modulares e variáveis CSS</p>
+    </footer>
+</body>
+</html>
